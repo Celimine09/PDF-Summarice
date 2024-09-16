@@ -1,0 +1,136 @@
+body {
+    font-family: "Magarine", cursive;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav {
+    background-color: #D0B8A8;
+    font-family: "Marck Script", cursive;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    position: sticky;
+}
+
+nav img {
+    height: 60px;
+    width: 200px;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+}
+
+nav h1 {
+    font-size: 28px;
+    margin: 0;
+    align-self: flex-end;
+}
+
+@media only screen and (max-width: 768px) {
+    .head-container {
+        flex-direction: row;
+        text-align: flex-end;
+        justify-content: space-between;
+        padding: 5px;
+    }
+
+    img {
+        margin-bottom: 10px;
+        height: 40px; /* ลดขนาดของโลโก้สำหรับหน้าจอเล็ก */
+        width: 130px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 18px;
+        align-self: flex-end;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .head-container {
+        flex-direction: row;
+        text-align: center;
+        padding: 5px;
+    }
+
+    img {
+        height: 40px;
+        width: 130px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 16px;
+        align-self: flex-end;
+    }
+}
+
+.content-head {
+    display: flex;
+    justify-content: center;
+    /* width: 993px; */
+    margin-top: 20px;
+}
+
+.content {
+    height: 480px;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8ede3;
+    border-radius: 20px;
+    position: relative;
+}
+
+.uploadbtn {
+    background-color: #d9d9d9;
+    font-family: "Magarine", cursive;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 12px 12px;
+}
+
+.uploadbtn:hover{
+    background-color: #c5705d;
+}
+
+.uploadbtn img{
+    height: 25px;
+    width: 23px;
+}
+
+.summarizebtn {
+    font-family: "Magarine", cursive;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px 20px;
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+/* .summarizebtn:{ อัปโหลดไฟล์เปลี่ยนสี
+    background-color: green;
+} */
