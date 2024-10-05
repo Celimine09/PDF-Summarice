@@ -134,3 +134,25 @@ nav h1 {
 /* .summarizebtn:{ อัปโหลดไฟล์เปลี่ยนสี
     background-color: green;
 } */
+
+#fileDisplay {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 14px;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+[href$=".pdf"]::after {
+    content: '  \f1c1';
+    color: red;
+}
+
+[href$=".docx"]::after {
+    content: '  \f1c2';
+    color: green;
+}

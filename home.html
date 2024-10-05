@@ -24,16 +24,25 @@
         <div class="content-head"></div>
             <h2>PDF Summarizer</h2>
             <div class="content">
-                <button class="uploadbtn">
+
+                <input type="file" id="fileInput" multiple style="display: none;">
+
+                <button id="uploadbtn" class="uploadbtn">
                     <img src="img/Icon.png" alt="">
                      Upload
                 </button>
+
                 <button class="summarizebtn">
                     Summarize
                 </button>
+
+                <div id="fileDisplay"></div>
+                
             </div>
         </div>
     </div>
+
+    <script src="home.js"></script>
 </body>
 
 </html>
