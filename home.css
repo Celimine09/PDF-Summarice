@@ -131,7 +131,7 @@ nav h1 {
     border-radius: 10px;
 }
 
-/* .summarizebtn:{ อัปโหลดไฟล์เปลี่ยนสี
+.summarizebtn:hover {
     background-color: green;
 } */
 
@@ -155,4 +155,20 @@ nav h1 {
 [href$=".docx"]::after {
     content: '  \f1c2';
     color: green;
+    cursor: pointer;
+}
+
+.downloadbtn, .sharebtn {
+    font-family: "Magarine", cursive;
+    padding: 10px 20px;
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.downloadbtn:hover, .sharebtn:hover {
+    background-color: #00aaff; /* You can change this color */
+    cursor: pointer;
 }
