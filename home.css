@@ -169,24 +169,32 @@ nav h1 {
     cursor: pointer;
 }
 
-.file-item {
+.folder-item {
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-size: 18px;
-    cursor: pointer;
-    margin: 5px 0;
+    justify-content: flex-start;
+    background-color: #f9f9f9;
+    border: 2px solid #ddd; /* เพิ่มขนาดเส้นขอบ */
+    padding: 20px 25px; /* เพิ่มระยะห่างภายใน (padding) */
+    margin: 15px 0; /* เพิ่มระยะห่างระหว่างแต่ละโฟลเดอร์ */
+    border-radius: 10px; /* เพิ่มความโค้งมน */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15); /* เพิ่มเงาให้ใหญ่ขึ้น */
+    font-size: 24px; /* เพิ่มขนาดตัวอักษร */
+    font-weight: bold;
     color: #333;
-    text-decoration: none;}
-
-.file-item:hover {
-    text-decoration: underline;
-    /* color: #007bff; */
+    position: relative;
+    transition: background-color 0.3s ease;
 }
 
-/* .file-item i {
-    font-size: 20px;
-} */
+.folder-item:hover {
+    background-color: #e3f2fd;
+}
+
+.folder-item i {
+    margin-right: 15px; /* เพิ่มระยะห่างระหว่างไอคอนและข้อความ */
+    font-size: 36px; /* เพิ่มขนาดไอคอน */
+    color: #007bff;
+}
 
 .downloadbtn, .sharebtn {
     font-family: "Magarine", cursive;
