@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Summarizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <img src="{{ url_for('static', filename='img/logo_no_bg2.png') }}" alt="Logo">
+        <div class="text-container">
+            <h1>-Let the Rice Summarize-</h1>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="content-head">
+            <h2>PDF Summarizer</h2>
+        </div>
+
+        <div class="content">
+            <input type="file" id="fileInput" webkitdirectory directory multiple style="display: none;">
+            <button id="uploadbtn" class="uploadbtn"><i class="fas fa-upload"></i> Upload</button>
+            <div id="fileDisplay"></div>
+            <button id="summarizebtn" class="summarizebtn" style="display: none;">Summarize</button>
+            <button id="downloadbtn" class="downloadbtn" style="display: none;">Download</button>
+            <div id="progressContainer" style="display: none;">
+                Progress: <progress id="progressBar" value="0" max="100"></progress>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='home.js') }}"></script>
+</body>
+</html>

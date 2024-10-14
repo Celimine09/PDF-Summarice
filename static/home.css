@@ -1,0 +1,138 @@
+body {
+    font-family: "Magarine", cursive;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav {
+    background-color: #D0B8A8;
+    font-family: "Marck Script", cursive;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+nav img {
+    height: 60px;
+    width: auto;
+}
+
+.text-container h1 {
+    font-size: 28px;
+    margin: 0;
+}
+
+.content-head {
+    margin-top: 20px;
+}
+
+.content {
+    width: 80%;
+    max-width: 800px;
+    min-height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8ede3;
+    border-radius: 20px;
+    padding: 20px;
+    position: relative;
+    margin-top: 20px;
+}
+
+.uploadbtn, .summarizebtn, .downloadbtn, .sharebtn {
+    font-family: "Magarine", cursive;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 12px 20px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: none;
+}
+
+.uploadbtn {
+    background-color: #d9d9d9;
+}
+
+.uploadbtn:hover {
+    background-color: #c5705d;
+}
+
+.summarizebtn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.summarizebtn:hover {
+    background-color: #45a049;
+}
+
+.downloadbtn, .sharebtn {
+    background-color: #008CBA;
+    color: white;
+}
+
+.downloadbtn:hover, .sharebtn:hover {
+    background-color: #007B9E;
+}
+
+#fileDisplay {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 18px;
+    max-height: 200px;
+    overflow-y: auto;
+    width: 90%;
+}
+
+.folder-item {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    padding: 15px 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.folder-item i {
+    margin-right: 15px;
+    font-size: 24px;
+    color: #007bff;
+}
+
+@media only screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav img {
+        margin-bottom: 10px;
+    }
+
+    .content {
+        width: 90%;
+    }
+}
