@@ -40,7 +40,7 @@ nav img {
 .content {
     width: 80%;
     max-width: 800px;
-    min-height: 480px;
+    min-height: 450px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -52,7 +52,10 @@ nav img {
     margin-top: 20px;
 }
 
-.uploadbtn, .summarizebtn, .downloadbtn, .sharebtn {
+.uploadbtn,
+.summarizebtn,
+.downloadbtn,
+.sharebtn {
     font-family: "Magarine", cursive;
     font-size: 18px;
     border-radius: 10px;
@@ -80,16 +83,19 @@ nav img {
     background-color: #45a049;
 }
 
-.downloadbtn, .sharebtn {
+.downloadbtn,
+.sharebtn {
     background-color: #008CBA;
     color: white;
 }
 
-.downloadbtn:hover, .sharebtn:hover {
+.downloadbtn:hover,
+.sharebtn:hover {
     background-color: #007B9E;
 }
 
 #fileDisplay {
+    display: none;
     margin-top: 20px;
     padding: 10px;
     border: 1px solid #ccc;
@@ -135,4 +141,74 @@ nav img {
     .content {
         width: 90%;
     }
+}
+
+/* Job description text area */
+textarea#jobDescription {
+    width: 90%;
+    max-width: 700px;
+    height: 100px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    resize: none;
+}
+
+textarea#jobDescription::placeholder {
+    color: #aaa;
+}
+
+label[for="jobDescription"] {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Spinner overlay to cover the entire screen */
+.spinner-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensures it's on top of all content */
+    flex-direction: column; /* Align spinner and text vertically */
+}
+
+/* Spinner itself */
+.spinner {
+    --d: 40px; /* Adjust size for wider spinner */
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    color: yellow;
+    box-shadow: 
+      calc(1*var(--d))      calc(0*var(--d))     0 0,
+      calc(0.707*var(--d))  calc(0.707*var(--d)) 0 1px,
+      calc(0*var(--d))      calc(1*var(--d))     0 2px,
+      calc(-0.707*var(--d)) calc(0.707*var(--d)) 0 3px,
+      calc(-1*var(--d))     calc(0*var(--d))     0 4px,
+      calc(-0.707*var(--d)) calc(-0.707*var(--d))0 5px,
+      calc(0*var(--d))      calc(-1*var(--d))    0 6px;
+    animation: l27 1s infinite steps(8);
+}
+
+@keyframes l27 {
+    100% {
+        transform: rotate(1turn)
+    }
+}
+
+/* Decreased opacity for the background when spinner is active */
+.content.dimmed {
+    opacity: 0.3;
 }

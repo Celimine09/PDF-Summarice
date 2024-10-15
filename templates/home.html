@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <nav>
         <img src="{{ url_for('static', filename='img/logo_no_bg2.png') }}" alt="Logo">
@@ -21,18 +23,30 @@
         </div>
 
         <div class="content">
+
+            <!-- Job Description Input -->
+            <label for="jobDescription">Enter Job Description:</label>
+            <textarea id="jobDescription" rows="5" placeholder="Enter the job description..."></textarea>
+
+            <!-- File Upload Section -->
             <input type="file" id="fileInput" webkitdirectory directory multiple style="display: none;">
             <button id="uploadbtn" class="uploadbtn"><i class="fas fa-upload"></i> Upload</button>
             <div id="fileDisplay"></div>
+
+            <!-- Summarize Button -->
             <button id="summarizebtn" class="summarizebtn" style="display: none;">Summarize</button>
+
+            <!-- Download Button -->
             <button id="downloadbtn" class="downloadbtn" style="display: none;">Download</button>
-            <div id="progressContainer" style="display: none;">
-                Progress: <progress id="progressBar" value="0" max="100"></progress>
-            </div>
-            
+
+        </div>
+
+        <!-- Loading Spinner -->
+        <div id="loadingSpinner" class="spinner-overlay" style="display: none;">
+            <div class="spinner"></div>
         </div>
     </div>
-
     <script src="{{ url_for('static', filename='home.js') }}"></script>
 </body>
+
 </html>
